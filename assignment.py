@@ -1,4 +1,4 @@
-#dfghjkljhgbnmkj
+#this is gud
 import pyglet, glooey
 
 mainWindow = pyglet.window.Window()
