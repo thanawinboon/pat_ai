@@ -1,7 +1,7 @@
-import pyglet, glooey
 print("")
 
-#this is pat's code:
+import pyglet, glooey
+
 mainWindow = pyglet.window.Window()
 mainGui = glooey.Gui(mainWindow)
 rows = glooey.VBox()
