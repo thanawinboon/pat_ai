@@ -33,7 +33,7 @@ class PatFrame(glooey.Frame):
 mainWindow = pyglet.window.Window()
 mainGui = glooey.Gui(mainWindow)
 
-
+frame = PatFrame()
 rows = glooey.VBox()
 frame.add(rows)
 mainGui.add(frame)
