@@ -3,7 +3,7 @@ import pyglet, glooey
 
 #=====================================
 
-class PatLable(glooey.lable):
+class PatLabel(glooey.Label):
     custom_font_size = 25
     custom_alignment = "center"
     custom_color = "ffffff"
@@ -16,7 +16,7 @@ mainGui = glooey.Gui(mainWindow)
 rows = glooey.VBox()
 mainGui.add(rows)
 
-title1 = PatLable("This is the password checker.")
+title1 = PatLabel("This is the password checker.")
 rows.add(title1)
 
 pyglet.app.run()
