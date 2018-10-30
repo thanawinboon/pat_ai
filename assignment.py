@@ -8,6 +8,8 @@ class PatLabel(glooey.Label):
     custom_alignment = "center"
     custom_color = "ffffff"
     custom_bold = True
+
+class PatButton(glooey.Button):
     class Label(glooey.Label):
         custom_padding = 10
     class Base(glooey.images.Background):
@@ -20,6 +22,12 @@ class PatLabel(glooey.Label):
         custom_outline = "green"
         custom_color = "white"
 
+class PatForm(glooey.Form):
+    class Label(glooey.Label):
+        custom_padding = 10
+    class Base(glooey.images.Background):
+        custom_color = "000000"
+        custom_outline = "00ffff"
 
 class PatFrame(glooey.Frame):
     class Decoration(glooey.images.Background):
@@ -40,6 +48,9 @@ mainGui.add(frame)
 
 title1 = PatLabel("This is the password checker.")
 rows.add(title1)
+
+button1 = PatButton("Check password")
+
 
 pyglet.app.run()
 
