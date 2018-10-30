@@ -1,5 +1,5 @@
 #this is gud
-import pyglet, glooey
+import pyglet, glooey, random, string
 
 #=====================================
 
@@ -59,6 +59,8 @@ button1 = PatButton("Click to check!")
 form1 = PatForm("Enter password here!")
 text1 = PatLabel2("")
 blank = PatLabel2("")
+button2 = PatButton("Improve your Password!")
+text2 = PatLabel2("")
 
 
 #=====================================
@@ -70,6 +72,8 @@ rows.add(form1)
 rows.add(button1)
 rows.add(text1)
 rows.add(blank)
+rows.add(button2)
+rows.add(text2)
 
 #=====================================
 #        Functions
@@ -83,37 +87,14 @@ def buttonDown(widget):
         text1.set_text("Gr8 one!")
     print(form1.text)
 
-def newPass():
-    print("")
+def newPass(widget):
+    PatLabel2.custom_color = "000000"
+    originalLength = len(form1.text)
+    new = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for index in range(originalLength))
+    text2.set_text(new)
 #=====================================
 #        Event listener + Run
 
 button1.push_handlers(on_click=buttonDown)
+button2.push_handlers(on_click=newPass)
 pyglet.app.run()
-
-#=====================================
-                # OLD CODE
-'''
-mainWindow = pyglet.window.Window()
-mainGui = glooey.Gui(mainWindow)
-rows = glooey.VBox()
-mainGui.add(rows)
-
-title1 = glooey.Label("This is the password checker.")
-rows.add(title1)
-
-ask = glooey.Label("Please enter a password")
-rows.add(ask)
-form = glooey.Form("")
-rows.add(form)
-
-button = glooey.Button("This is a scam!")
-def buttclicked(wiget):
-    print(form.text)
-button.push_handlers(on_click=buttclicked)
-rows.add(button)
-
-pyglet.app.run()
-
-#helloworld
-'''
