@@ -1,4 +1,7 @@
 #this is gud
+
+#https://docs.python.org/3/library/string.html
+
 import pyglet, glooey, random, string
 
 #=====================================
